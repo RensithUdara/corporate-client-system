@@ -11,20 +11,20 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #000;
-  background-color: #0a0a0a; /* Slightly softer black for depth */
+  background-color: #0a0a0a;
   overflow-x: hidden;
 }
 
 /* Custom Input Styling */
 .custom-input {
   width: 100%;
-  padding: 1rem 1.5rem; /* Larger padding for a premium feel */
-  border: 1px solid #ddd; /* Softer gray border */
-  border-radius: 0.75rem; /* Slightly rounder corners */
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
   font-size: 0.9rem;
   color: #000;
-  background-color: #fafafa; /* Off-white for a luxurious touch */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9); /* Deeper shadow + subtle inset glow */
+  background-color: #fafafa;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease-in-out;
 }
 
@@ -32,11 +32,11 @@ body {
   outline: none;
   border-color: #000;
   background-color: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9); /* Enhanced focus shadow */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9);
 }
 
 .custom-input::placeholder {
-  color: #777; /* Softer gray placeholder */
+  color: #777;
   font-style: italic;
 }
 
@@ -83,25 +83,25 @@ button {
   color: #fff;
   border: none;
   border-radius: 0.75rem;
-  padding: 1rem 2rem; /* Larger padding for a bold, rich look */
+  padding: 1rem 2rem;
   font-size: 0.95rem;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase for a premium vibe */
+  text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2); /* Layered shadows */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 button:hover:not(:disabled) {
-  background-color: #1a1a1a; /* Slightly lighter black on hover */
+  background-color: #1a1a1a;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px); /* Subtle lift effect */
+  transform: translateY(-2px);
 }
 
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Maintain shadow when disabled */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 button::after {
@@ -122,40 +122,58 @@ button:hover::after {
   height: 250%;
 }
 
+/* Password Toggle Button Styling */
+.password-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.password-toggle:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.password-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Form Container */
 .min-h-screen {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem; /* Increased padding */
+  padding: 2rem;
   background: #0a0a0a;
 }
 
 /* Card Styling */
 .bg-white {
   background-color: #fff;
-  border-radius: 1rem; /* Rounder corners for elegance */
-  padding: 3rem; /* More spacious padding */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 4px 15px rgba(0, 0, 0, 0.15); /* Deeper, layered shadows */
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for definition */
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bg-white:hover {
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px); /* Slight lift on hover */
+  transform: translateY(-3px);
 }
 
 /* Text and Labels */
 .text-gray-700 {
-  color: #555; /* Darker gray for better contrast */
+  color: #555;
   font-weight: 500;
 }
 
 .text-gray-800 {
   color: #000;
-  font-weight: 700; /* Bolder headings */
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -166,19 +184,19 @@ button:hover::after {
 }
 
 .hover\:text-purple-800:hover {
-  color: #222; /* Slightly darker hover */
+  color: #222;
 }
 
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Larger gap for elegance */
+  gap: 1rem;
   text-align: center;
 }
 
 /* Error Messages */
 .text-red-500 {
-  color: #ff4444; /* Brighter red for emphasis */
+  color: #ff4444;
   font-size: 0.8rem;
   margin-top: 0.5rem;
   font-weight: 500;
@@ -186,12 +204,12 @@ button:hover::after {
 
 /* Form Spacing */
 .space-y-6 > * + * {
-  margin-top: 1.75rem; /* Increased spacing for a more open layout */
+  margin-top: 1.75rem;
 }
 
 /* Grid Styling */
 .grid-cols-2 {
-  gap: 1.5rem; /* Larger gap for a richer look */
+  gap: 1.5rem;
 }
 
 /* Responsive Adjustments */
