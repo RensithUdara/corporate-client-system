@@ -43,7 +43,7 @@ const schema = z.object({
     return true; // No additional requirements for Private
   }, {
     message: 'All required Corporate fields must be filled',
-    path: ['companyName'], // Point to companyName for error display, but it applies to all required fields
+    path: ['companyName'],
   });
 
 type FormData = z.infer<typeof schema>;
@@ -52,6 +52,9 @@ export default function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
+    defaultValues: {
+      customerType: '', // Default to empty string, which maps to "Select customer type"
+    },
   });
 
   const customerType = watch('customerType');
