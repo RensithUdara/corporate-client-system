@@ -10,88 +10,98 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #000; /* Black text for contrast against white card */
-  background-color: #000; /* Solid black background */
+  color: #000;
+  background-color: #0a0a0a; /* Slightly softer black for depth */
+  overflow-x: hidden;
 }
 
 /* Custom Input Styling */
 .custom-input {
   width: 100%;
-  padding: 0.875rem 1.25rem; /* Increased padding for a richer feel */
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  color: #000; /* Black text */
-  background-color: #f5f5f5; /* Very light gray background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.8); /* Rich shadow + inset glow */
+  padding: 1rem 1.5rem; /* Larger padding for a premium feel */
+  border: 1px solid #ddd; /* Softer gray border */
+  border-radius: 0.75rem; /* Slightly rounder corners */
+  font-size: 0.9rem;
+  color: #000;
+  background-color: #fafafa; /* Off-white for a luxurious touch */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9); /* Deeper shadow + subtle inset glow */
   transition: all 0.3s ease-in-out;
 }
 
 .custom-input:focus {
   outline: none;
-  border-color: #000; /* Black border on focus */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.8); /* Enhanced shadow on focus */
-  background-color: #fff; /* White on focus */
+  border-color: #000;
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9); /* Enhanced focus shadow */
 }
 
 .custom-input::placeholder {
-  color: #666; /* Medium gray placeholder */
+  color: #777; /* Softer gray placeholder */
+  font-style: italic;
 }
 
 /* Custom Select Styling */
 .custom-select {
   width: 100%;
-  padding: 0.875rem 1.25rem; /* Increased padding */
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
   color: #000;
-  background-color: #f5f5f5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.8); /* Rich shadow + inset glow */
+  background-color: #fafafa;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9);
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23777'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 1.25rem center;
-  background-size: 1rem;
+  background-position: right 1.5rem center;
+  background-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 }
 
 .custom-select:focus {
   outline: none;
   border-color: #000;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.8); /* Enhanced shadow on focus */
   background-color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9);
 }
 
 /* Checkbox Styling */
 input[type="checkbox"] {
-  accent-color: #000; /* Black checkbox */
-  border-color: #ccc;
+  accent-color: #000;
+  border-color: #ddd;
+  border-radius: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all 0.2s ease;
 }
 
 /* Button Styling */
 button {
   position: relative;
   overflow: hidden;
-  background-color: #000; /* Solid black button */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
   border: none;
-  border-radius: 0.5rem;
-  padding: 0.875rem; /* Increased padding for richer look */
-  font-weight: 600; /* Bolder text */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for luxury */
+  border-radius: 0.75rem;
+  padding: 1rem 2rem; /* Larger padding for a bold, rich look */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase for a premium vibe */
+  letter-spacing: 0.05em;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2); /* Layered shadows */
   transition: all 0.3s ease;
 }
 
 button:hover:not(:disabled) {
-  background-color: #333; /* Darker gray on hover */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35); /* Elevated shadow on hover */
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
 button:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Maintain shadow when disabled */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Maintain shadow when disabled */
 }
 
 button::after {
@@ -101,15 +111,15 @@ button::after {
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 button:hover::after {
-  width: 200%;
-  height: 200%;
+  width: 250%;
+  height: 250%;
 }
 
 /* Form Container */
@@ -118,58 +128,70 @@ button:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  background: #000; /* Solid black background */
+  padding: 2rem; /* Increased padding */
+  background: #0a0a0a;
 }
 
 /* Card Styling */
 .bg-white {
-  background-color: #ffffff; /* Rich white for a luxurious look */
-  border-radius: 0.75rem;
-  padding: 2.5rem; /* Increased padding for a spacious feel */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Deeper shadow for richness */
-  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+  border-radius: 1rem; /* Rounder corners for elegance */
+  padding: 3rem; /* More spacious padding */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 4px 15px rgba(0, 0, 0, 0.15); /* Deeper, layered shadows */
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for definition */
 }
 
 .bg-white:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Even richer shadow on hover */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Slight lift on hover */
 }
 
 /* Text and Labels */
 .text-gray-700 {
-  color: #666; /* Medium gray for labels */
+  color: #555; /* Darker gray for better contrast */
+  font-weight: 500;
 }
 
 .text-gray-800 {
-  color: #000; /* Black for headings */
+  color: #000;
+  font-weight: 700; /* Bolder headings */
+  letter-spacing: -0.02em;
 }
 
 /* Links */
 .text-purple-600 {
-  color: #000; /* Black links */
+  color: #000;
+  font-weight: 500;
 }
 
 .hover\:text-purple-800:hover {
-  color: #333; /* Darker gray on hover */
+  color: #222; /* Slightly darker hover */
 }
 
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* Increased gap for better spacing */
+  gap: 1rem; /* Larger gap for elegance */
   text-align: center;
 }
 
 /* Error Messages */
 .text-red-500 {
-  color: #ff3333; /* Bright red for errors */
-  font-size: 0.75rem;
-  margin-top: 0.5rem; /* Increased margin for spacing */
+  color: #ff4444; /* Brighter red for emphasis */
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
 }
 
 /* Form Spacing */
 .space-y-6 > * + * {
-  margin-top: 1.5rem; /* Increased spacing between form elements for padding between button and textbox */
+  margin-top: 1.75rem; /* Increased spacing for a more open layout */
+}
+
+/* Grid Styling */
+.grid-cols-2 {
+  gap: 1.5rem; /* Larger gap for a richer look */
 }
 
 /* Responsive Adjustments */
@@ -181,23 +203,30 @@ button:hover::after {
 
   .grid-cols-2 {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .p-8 {
+  .min-h-screen {
     padding: 1.5rem;
   }
 
-  h1 {
-    font-size: 1.75rem;
+  .bg-white {
+    padding: 2rem;
+    border-radius: 0.75rem;
   }
 
-  .bg-white {
-    padding: 1.5rem; /* Reduced padding on smaller screens */
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  button {
+    padding: 0.875rem 1.5rem;
   }
 }
 
 /* Accessibility */
 :focus-visible {
-  outline: 2px solid #000;
+  outline: 3px solid #000;
   outline-offset: 2px;
+  border-radius: 0.5rem;
 }
