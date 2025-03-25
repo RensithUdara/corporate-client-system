@@ -10,43 +10,44 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #fff; /* White text for contrast against dark background */
+  background-color: #000; /* Black background */
 }
 
 /* Custom Input Styling */
 .custom-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #333; /* Darker border */
   border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: #374151;
-  background-color: #f9fafb;
+  color: #fff; /* White text */
+  background-color: #1a1a1a; /* Dark gray background */
   transition: all 0.2s ease-in-out;
 }
 
 .custom-input:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
-  background-color: #fff;
+  border-color: #fff; /* White border on focus */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); /* Subtle white glow */
+  background-color: #2a2a2a; /* Slightly lighter gray */
 }
 
 .custom-input::placeholder {
-  color: #9ca3af;
+  color: #999; /* Light gray placeholder */
 }
 
 /* Custom Select Styling */
 .custom-select {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #333;
   border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: #374151;
-  background-color: #f9fafb;
+  color: #fff;
+  background-color: #1a1a1a;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23999'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1rem;
@@ -55,21 +56,37 @@ body {
 
 .custom-select:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
-  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  background-color: #2a2a2a;
 }
 
 /* Checkbox Styling */
 input[type="checkbox"] {
-  accent-color: #8b5cf6;
-  transition: all 0.2s ease-in-out;
+  accent-color: #fff; /* White checkbox */
+  border-color: #333;
 }
 
-/* Button Enhancements */
+/* Button Styling */
 button {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(to right, #333, #666); /* Gradient from dark gray to medium gray */
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(to right, #444, #777); /* Lighter gradient on hover */
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 button::after {
@@ -97,24 +114,52 @@ button:hover::after {
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
+  background: #000; /* Solid black background */
 }
 
 /* Card Styling */
 .bg-white {
-  background-color: #ffffff;
+  background-color: #111; /* Very dark gray for card */
   border-radius: 0.75rem;
   padding: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   transition: box-shadow 0.3s ease;
 }
 
 .bg-white:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
-/* Gradient Background */
-.bg-gradient-to-br {
-  background: linear-gradient(to bottom right, #3b82f6, #8b5cf6, #a855f7);
+/* Text and Labels */
+.text-gray-700 {
+  color: #ccc; /* Light gray for labels */
+}
+
+.text-gray-800 {
+  color: #fff; /* White for headings */
+}
+
+/* Links */
+.text-purple-600 {
+  color: #fff; /* White links */
+}
+
+.hover\:text-purple-800:hover {
+  color: #ccc; /* Light gray on hover */
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Space between links */
+  text-align: center;
+}
+
+/* Error Messages */
+.text-red-500 {
+  color: #ff5555; /* Bright red for errors */
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 /* Responsive Adjustments */
@@ -139,28 +184,6 @@ button:hover::after {
 
 /* Accessibility */
 :focus-visible {
-  outline: 2px solid #8b5cf6;
+  outline: 2px solid #fff;
   outline-offset: 2px;
-}
-
-/* Error Messages */
-.text-red-500 {
-  color: #ef4444;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-/* Links */
-.text-purple-600 {
-  color: #8b5cf6;
-}
-
-.hover\:text-purple-800:hover {
-  color: #6d28d9;
-}
-
-/* Disabled Button */
-.disabled\:opacity-50:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
