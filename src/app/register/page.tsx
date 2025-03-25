@@ -44,7 +44,6 @@ export default function RegisterPage() {
     try {
       const response = await registerUser(data);
       console.log('Registration successful:', response);
-      // Optionally redirect or update UI here
     } catch (error) {
       console.error('Registration failed:', error);
     } finally {
@@ -53,7 +52,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-blue-500 via-purple-500 to-purple-600">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-lg bg-white rounded-xl p-8 shadow-lg transform transition-all hover:shadow-xl">
         <h1 className="text-3xl font-semibold mb-6 text-gray-800 text-center">Create Your Account</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -175,11 +174,11 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg py-3 font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50"
+            className="w-full text-white rounded-lg py-3 font-medium transition-all duration-300"
           >
             {loading ? 'Registering...' : 'Create Account'}
           </button>
-          <div className="flex justify-between text-sm mt-4">
+          <div className="links-container text-sm mt-4">
             <Link href="/login" className="text-purple-600 hover:underline hover:text-purple-800 transition-colors">
               Already have an account? Log in
             </Link>
