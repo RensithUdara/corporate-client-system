@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #000;
   background-color: #0a0a0a;
   overflow-x: hidden;
@@ -18,60 +18,61 @@ body {
 /* Custom Input Styling */
 .custom-input {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem; /* Reduced padding */
   border: 1px solid #ddd;
-  border-radius: 0.75rem;
-  font-size: 0.9rem;
+  border-radius: 0.5rem; /* Slightly smaller radius */
+  font-size: 0.85rem; /* Smaller font */
   color: #000;
   background-color: #fafafa;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease-in-out; /* Faster transition */
 }
 
 .custom-input:focus {
   outline: none;
   border-color: #000;
   background-color: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .custom-input::placeholder {
-  color: #777;
+  color: #888;
   font-style: italic;
+  font-size: 0.8rem; /* Smaller placeholder */
 }
 
 /* Custom Select Styling */
 .custom-select {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 0.75rem;
-  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
   color: #000;
   background-color: #fafafa;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), inset 0 1px 3px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), inset 0 1px 2px rgba(255, 255, 255, 0.9);
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23777'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23888'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 1.5rem center;
-  background-size: 1.1rem;
-  transition: all 0.3s ease-in-out;
+  background-position: right 1rem center;
+  background-size: 0.9rem; /* Smaller arrow */
+  transition: all 0.2s ease-in-out;
 }
 
 .custom-select:focus {
   outline: none;
   border-color: #000;
   background-color: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), inset 0 1px 3px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 /* Checkbox Styling */
 input[type="checkbox"] {
   accent-color: #000;
   border-color: #ddd;
-  border-radius: 0.25rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  border-radius: 0.2rem;
+  width: 1rem; /* Smaller checkbox */
+  height: 1rem;
   transition: all 0.2s ease;
 }
 
@@ -82,26 +83,26 @@ button {
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 0.75rem;
-  padding: 1rem 2rem;
-  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem; /* Reduced padding */
+  font-size: 0.85rem; /* Smaller font */
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
 }
 
 button:hover:not(:disabled) {
   background-color: #1a1a1a;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px); /* Subtler lift */
 }
 
 button:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 button::after {
@@ -111,15 +112,15 @@ button::after {
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.5s ease, height 0.5s ease;
+  transition: width 0.4s ease, height 0.4s ease;
 }
 
 button:hover::after {
-  width: 250%;
-  height: 250%;
+  width: 200%;
+  height: 200%;
 }
 
 /* Password Toggle Button Styling */
@@ -128,15 +129,19 @@ button:hover::after {
   border: none;
   padding: 0;
   cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   transition: opacity 0.2s ease;
 }
 
 .password-toggle:hover:not(:disabled) {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .password-toggle:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -146,70 +151,73 @@ button:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem; /* Reduced padding */
   background: #0a0a0a;
 }
 
 /* Card Styling */
 .bg-white {
   background-color: #fff;
-  border-radius: 1rem;
-  padding: 3rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 4px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  border-radius: 0.75rem; /* Smaller radius */
+  padding: 2rem; /* Reduced padding */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .bg-white:hover {
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px); /* Subtler lift */
 }
 
 /* Text and Labels */
 .text-gray-700 {
   color: #555;
   font-weight: 500;
+  font-size: 0.8rem; /* Smaller label */
 }
 
 .text-gray-800 {
   color: #000;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.5rem; /* Smaller heading */
+  letter-spacing: -0.01em;
 }
 
 /* Links */
 .text-purple-600 {
-  color: #000;
+  color: #ff5722;
   font-weight: 500;
+  font-size: 0.8rem; /* Smaller link text */
 }
 
 .hover\:text-purple-800:hover {
-  color: #222;
+  color: #ff7043;
 }
 
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem; /* Reduced gap */
   text-align: center;
 }
 
 /* Error Messages */
 .text-red-500 {
   color: #ff4444;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+  font-size: 0.75rem; /* Smaller error text */
+  margin-top: 0.25rem;
   font-weight: 500;
 }
 
 /* Form Spacing */
 .space-y-6 > * + * {
-  margin-top: 1.75rem;
+  margin-top: 1.25rem; /* Reduced spacing */
 }
 
 /* Grid Styling */
 .grid-cols-2 {
-  gap: 1.5rem;
+  gap: 1rem; /* Reduced gap */
 }
 
 /* Responsive Adjustments */
@@ -221,30 +229,30 @@ button:hover::after {
 
   .grid-cols-2 {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .min-h-screen {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .bg-white {
-    padding: 2rem;
-    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
   }
 
-  h1 {
-    font-size: 1.875rem;
+  .text-gray-800 {
+    font-size: 1.25rem; /* Smaller heading on mobile */
   }
 
   button {
-    padding: 0.875rem 1.5rem;
+    padding: 0.65rem 1.25rem;
   }
 }
 
 /* Accessibility */
 :focus-visible {
-  outline: 3px solid #000;
-  outline-offset: 2px;
-  border-radius: 0.5rem;
+  outline: 2px solid #000;
+  outline-offset: 1px;
+  border-radius: 0.25rem;
 }
