@@ -196,7 +196,7 @@ export default function RegisterPage() {
             <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
             <input
               type="email"
-              placeholder="janedoe@email.com"
+              placeholder="example@email.com"
               {...register('email')}
               className="custom-input"
               disabled={loading}
