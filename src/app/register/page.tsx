@@ -11,8 +11,13 @@ const schema = z.object({
   firstName: z.string().min(1, 'First Name is required'),
   lastName: z.string().min(1, 'Last Name is required'),
   customerType: z.enum(['Corporate', 'Private'], { errorMap: () => ({ message: 'Please select a customer type' }) }),
-  companyName: z.string().optional().refine((val) => !val || val.length > 0, { message: 'Company Name is required for Corporate customers' }),
+  companyName: z.string().optional(),
   companyAddress: z.string().optional(),
+  companyAddressField2: z.string().optional(),
+  city: z.string().optional(),
+  stateProvince: z.string().optional(),
+  postalCode: z.string().optional(),
+  country: z.string().optional(),
   email: z.string().email('Invalid email address').min(1, 'Email is required'),
   contactNumber: z.string().min(1, 'Contact Number is required'),
   password: z.string()
@@ -24,9 +29,21 @@ const schema = z.object({
   confirmPassword: z.string(),
   termsAccepted: z.boolean().refine((val) => val === true, { message: 'You must agree to the Terms & Conditions' }),
 }).refine((data) => data.password === data.confirmPassword, { message: 'Passwords must match', path: ['confirmPassword'] })
-  .refine((data) => data.customerType === 'Private' || (data.companyName && data.companyAddress), { 
-    message: 'Company Name and Address are required for Corporate customers', 
-    path: ['companyName'] 
+  .refine((data) => {
+    if (data.customerType === 'Corporate') {
+      return (
+        data.companyName &&
+        data.companyAddress &&
+        data.city &&
+        data.stateProvince &&
+        data.postalCode &&
+        data.country
+      );
+    }
+    return true; // No additional requirements for Private
+  }, {
+    message: 'All required Corporate fields must be filled',
+    path: ['companyName'], // Point to companyName for error display, but it applies to all required fields
   });
 
 type FormData = z.infer<typeof schema>;
@@ -100,7 +117,7 @@ export default function RegisterPage() {
                   className="custom-input"
                   disabled={loading}
                 />
-                {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName.message}</p>}
+                {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName.message || 'Company Name is required'}</p>}
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Company Address</label>
@@ -111,7 +128,62 @@ export default function RegisterPage() {
                   className="custom-input"
                   disabled={loading}
                 />
-                {errors.companyAddress && <p className="text-red-500 text-xs mt-1">{errors.companyAddress.message}</p>}
+                {errors.companyAddress && <p className="text-red-500 text-xs mt-1">{errors.companyAddress.message || 'Company Address is required'}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Company Address Field 2 (Optional)</label>
+                <input
+                  type="text"
+                  placeholder="Suite 100"
+                  {...register('companyAddressField2')}
+                  className="custom-input"
+                  disabled={loading}
+                />
+                {errors.companyAddressField2 && <p className="text-red-500 text-xs mt-1">{errors.companyAddressField2.message}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">City</label>
+                <input
+                  type="text"
+                  placeholder="New York"
+                  {...register('city')}
+                  className="custom-input"
+                  disabled={loading}
+                />
+                {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city.message || 'City is required'}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">State / Province</label>
+                <input
+                  type="text"
+                  placeholder="NY"
+                  {...register('stateProvince')}
+                  className="custom-input"
+                  disabled={loading}
+                />
+                {errors.stateProvince && <p className="text-red-500 text-xs mt-1">{errors.stateProvince.message || 'State / Province is required'}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Postal Code</label>
+                <input
+                  type="text"
+                  placeholder="10001"
+                  {...register('postalCode')}
+                  className="custom-input"
+                  disabled={loading}
+                />
+                {errors.postalCode && <p className="text-red-500 text-xs mt-1">{errors.postalCode.message || 'Postal Code is required'}</p>}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
+                <input
+                  type="text"
+                  placeholder="United States"
+                  {...register('country')}
+                  className="custom-input"
+                  disabled={loading}
+                />
+                {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country.message || 'Country is required'}</p>}
               </div>
             </>
           )}
