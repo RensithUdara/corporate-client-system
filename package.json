@@ -15,6 +15,7 @@
     "@mui/material": "^6.4.8",
     "axios": "^1.8.4",
     "corporate-client-portal": "file:",
+    "framer-motion": "^12.6.0",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
