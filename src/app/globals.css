@@ -18,14 +18,18 @@ body {
 /* Custom Input Styling */
 .custom-input {
   width: 100%;
-  padding: 0.75rem 1rem; /* Reduced padding */
+  padding: 0.75rem 1rem;
+  /* Reduced padding */
   border: 1px solid #ddd;
-  border-radius: 0.5rem; /* Slightly smaller radius */
-  font-size: 0.85rem; /* Smaller font */
+  border-radius: 0.5rem;
+  /* Slightly smaller radius */
+  font-size: 0.85rem;
+  /* Smaller font */
   color: #000;
   background-color: #fafafa;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-  transition: all 0.2s ease-in-out; /* Faster transition */
+  transition: all 0.2s ease-in-out;
+  /* Faster transition */
 }
 
 .custom-input:focus {
@@ -38,7 +42,8 @@ body {
 .custom-input::placeholder {
   color: #888;
   font-style: italic;
-  font-size: 0.8rem; /* Smaller placeholder */
+  font-size: 0.8rem;
+  /* Smaller placeholder */
 }
 
 /* Custom Select Styling */
@@ -55,7 +60,8 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23888'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
-  background-size: 0.9rem; /* Smaller arrow */
+  background-size: 0.9rem;
+  /* Smaller arrow */
   transition: all 0.2s ease-in-out;
 }
 
@@ -71,7 +77,8 @@ input[type="checkbox"] {
   accent-color: #000;
   border-color: #ddd;
   border-radius: 0.2rem;
-  width: 1rem; /* Smaller checkbox */
+  width: 1rem;
+  /* Smaller checkbox */
   height: 1rem;
   transition: all 0.2s ease;
 }
@@ -84,8 +91,10 @@ button {
   color: #fff;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem; /* Reduced padding */
-  font-size: 0.85rem; /* Smaller font */
+  padding: 0.75rem 1.5rem;
+  /* Reduced padding */
+  font-size: 0.85rem;
+  /* Smaller font */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -96,7 +105,8 @@ button {
 button:hover:not(:disabled) {
   background-color: #1a1a1a;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-1px); /* Subtler lift */
+  transform: translateY(-1px);
+  /* Subtler lift */
 }
 
 button:disabled {
@@ -151,15 +161,18 @@ button:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem; /* Reduced padding */
+  padding: 1.5rem;
+  /* Reduced padding */
   background: #0a0a0a;
 }
 
 /* Card Styling */
 .bg-white {
   background-color: #fff;
-  border-radius: 0.75rem; /* Smaller radius */
-  padding: 2rem; /* Reduced padding */
+  border-radius: 0.75rem;
+  /* Smaller radius */
+  padding: 2rem;
+  /* Reduced padding */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -167,20 +180,23 @@ button:hover::after {
 
 .bg-white:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px); /* Subtler lift */
+  transform: translateY(-2px);
+  /* Subtler lift */
 }
 
 /* Text and Labels */
 .text-gray-700 {
   color: #555;
   font-weight: 500;
-  font-size: 0.8rem; /* Smaller label */
+  font-size: 0.8rem;
+  /* Smaller label */
 }
 
 .text-gray-800 {
   color: #000;
   font-weight: 700;
-  font-size: 1.5rem; /* Smaller heading */
+  font-size: 1.5rem;
+  /* Smaller heading */
   letter-spacing: -0.01em;
 }
 
@@ -188,7 +204,8 @@ button:hover::after {
 .text-purple-600 {
   color: #ff5722;
   font-weight: 500;
-  font-size: 0.8rem; /* Smaller link text */
+  font-size: 0.8rem;
+  /* Smaller link text */
 }
 
 .hover\:text-purple-800:hover {
@@ -198,30 +215,35 @@ button:hover::after {
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* Reduced gap */
+  gap: 0.75rem;
+  /* Reduced gap */
   text-align: center;
 }
 
 /* Error Messages */
 .text-red-500 {
   color: #ff4444;
-  font-size: 0.75rem; /* Smaller error text */
+  font-size: 0.75rem;
+  /* Smaller error text */
   margin-top: 0.25rem;
   font-weight: 500;
 }
 
 /* Form Spacing */
-.space-y-6 > * + * {
-  margin-top: 1.25rem; /* Reduced spacing */
+.space-y-6>*+* {
+  margin-top: 1.25rem;
+  /* Reduced spacing */
 }
 
 /* Grid Styling */
 .grid-cols-2 {
-  gap: 1rem; /* Reduced gap */
+  gap: 1rem;
+  /* Reduced gap */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 640px) {
+
   .max-w-md,
   .max-w-lg {
     max-width: 100%;
@@ -242,7 +264,8 @@ button:hover::after {
   }
 
   .text-gray-800 {
-    font-size: 1.25rem; /* Smaller heading on mobile */
+    font-size: 1.25rem;
+    /* Smaller heading on mobile */
   }
 
   button {
