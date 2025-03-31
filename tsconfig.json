@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,9 +19,15 @@
     "incremental": true,
     "baseUrl": "./src", // Anchor all paths relative to src/
     "paths": {
-      "@/*": ["*"],              // Matches any file in src/
-      "@types/*": ["types/*"],   // Matches src/types/
-      "@store/*": ["store/*"]    // Matches src/store/
+      "@/*": [
+        "*"
+      ], // Matches any file in src/
+      "@types/*": [
+        "types/*"
+      ], // Matches src/types/
+      "@store/*": [
+        "store/*"
+      ] // Matches src/store/
     },
     "plugins": [
       {
@@ -25,6 +35,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
