@@ -131,8 +131,6 @@ export default function RegisterPage() {
                   placeholder="123 Main St"
                   {...register('companyAddress')}
                   className="custom-input"
-                  {...register('companyAddress')}
-                  className="custom-input"
                   disabled={loading}
                 />
                 {errors.companyAddress && <p className="text-red-500">{errors.companyAddress.message || 'Company Address is required'}</p>}
