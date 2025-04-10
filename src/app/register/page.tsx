@@ -55,7 +55,7 @@ export default function RegisterPage() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
-      customerType: '',
+      customerType: undefined,
     },
   });
 
